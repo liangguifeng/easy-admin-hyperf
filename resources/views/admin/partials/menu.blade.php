@@ -1,11 +1,11 @@
 @if(\Admin\Facades\Admin::user()->visible(\Hyperf\Utils\Arr::get($item, 'roles', []))&& \Admin\Facades\Admin::user()->can(\Hyperf\Utils\Arr::get($item, 'permission')))
     @if(!isset($item['children']))
         <li>
-{{--            @if(url()->isValidUrl($item['uri']))--}}
-                <a href="{{ $item['uri'] }}" target="_blank">
-{{--            @else--}}
-{{--                 <a href="{{ admin_url($item['uri']) }}"></a>--}}
-{{--            @endif--}}
+            @if(url()->isValidUrl($item['uri']))
+                <a href="{{ admin_url($item['uri']) }}" target="_blank">
+            @else
+                 <a href="{{ admin_url($item['uri']) }}">
+            @endif
                 <i class="fa {{$item['icon']}}"></i>
 {{--                @if (Lang::has($titleTranslation = 'admin.menu_titHasPermissionsles.' . trim(str_replace(' ', '_', strtolower($item['title'])))))--}}
 {{--                    <span>{{ __($titleTranslation) }}</span>--}}
