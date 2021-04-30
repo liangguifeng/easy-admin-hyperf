@@ -37,7 +37,6 @@
     @include('admin::partials.header')
 
     @include('admin::partials.sidebar')
-    {{--    这--}}
 
     <div class="content-wrapper" id="pjax-container">
         {!! \Admin\Facades\Admin::style() !!}
@@ -56,7 +55,7 @@
 
 <script>
     function LA() {}
-    LA.token = "{{ 111111111111 }}";
+    LA.token = "{{ csrf_token() }}";
     LA.user = @json($_user_);
 </script>
 
