@@ -28,7 +28,7 @@
                 <ul class="dropdown-menu" role="menu" style="min-width: 210px;max-height: 300px;overflow: auto;">
                     @foreach(\Admin\Facades\Admin::menuLinks() as $link)
                     <li>
-                        <a href="{{ admin_url($link['uri']) }}"><i class="fa {{ $link['icon'] }}"></i>{{ admin_trans($link['title']) }}</a>
+                        <a href="{{ admin_url($link['uri']) }}"><i class="fa {{ $link['icon'] }}"></i>{{ trans($link['title']) }}</a>
                     </li>
                     @endforeach
                 </ul>
@@ -38,12 +38,11 @@
         @endif
 
         <!-- Sidebar Menu -->
-{{--        <ul class="sidebar-menu">--}}
-{{--            <li class="header">{{ trans('admin.menu') }}</li>--}}
+        <ul class="sidebar-menu">
+            <li class="header">{{ trans('admin.menu') }}</li>
 
-{{--            @each('\Admin\Facades\Admin::partials.menu', \Admin\Facades\Admin::menu(), 'item')--}}
-
-{{--        </ul>--}}
+            @each('admin::partials.menu', \Admin\Facades\Admin::menu(), 'item')
+        </ul>
         <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
