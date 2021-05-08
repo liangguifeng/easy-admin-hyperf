@@ -14,16 +14,12 @@ namespace App\Controller;
 use Hyperf\View\RenderInterface;
 
 /**
- * Class IndexController
- *
- * @package App\Controller
+ * Class IndexController.
  */
 class IndexController extends AbstractController
 {
     /**
-     * 首页
-     *
-     * @param RenderInterface $render
+     * 首页.
      *
      * @return \Psr\Http\Message\ResponseInterface
      */
