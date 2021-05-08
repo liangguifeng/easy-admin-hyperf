@@ -31,6 +31,6 @@ return [
     ],
     // 视图命名空间 (主要用于扩展包中)
     'namespaces' => [
-        'web' => BASE_PATH . '/resources/views',
+        'web' => BASE_PATH . '/resources/views/web',
     ],
 ];
