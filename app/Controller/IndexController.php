@@ -29,6 +29,6 @@ class IndexController extends AbstractController
      */
     public function index(RenderInterface $render)
     {
-        return $render->render('web.index', ['name' => 'Hyperf']);
+        return view('web.index', ['name' => 'Hyperf']);
     }
 }
